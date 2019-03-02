@@ -1,0 +1,22 @@
+{
+  "name": "tdd-examples",
+  "version": "1.0.0",
+  "description": "공개된 책에 나와있는 TDD 예제를 직접 타이핑하면서 연습하기 <br>\r https://repo.yona.io/doortts/blog/issue/1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shinsunyoung/TDD-Examples.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shinsunyoung/TDD-Examples/issues"
+  },
+  "homepage": "https://github.com/shinsunyoung/TDD-Examples#readme",
+  "dependencies": {
+    "mocha": "^6.0.1"
+  }
+}
