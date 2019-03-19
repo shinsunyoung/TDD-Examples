@@ -13,16 +13,19 @@ public class World124 {
 
     /*
      *
-     * 1. 1,2,4를 조합해서 i(num)만큼 계속 작은수를 만든다.
-     * 2. 반복문이 끝나면 최종 수를 리턴해준다.
+     * 1. 3으로 나눈 수의 몫과 나머지를 구한다.
+     * 2. 나머지는 답(answer)에 더해준다. 다음 루프에서는 그 몫을 나눈다.
+     * 3. 몫이 0보다 작아지면 멈춘다.
+     * 4. answer을 한 번 뒤집는다.
      *
      * */
 
 
     public int solution(int num){
 
-        int answer;
+        String answer;
 
+        // 1 to 3
         answer = for124(num);
 
         switch (num){
@@ -37,36 +40,39 @@ public class World124 {
         }
     }
 
-    // 중복조합 이용하는 문제인듯
 
-    private int for124(int num) {
+    private String for124(int num) {
 
-        int arr[] = {1,2,4};
-        int answer;
+        String answer = "";
 
-        String temp; // 넣을 공간
+        int rem = 0; // 나머지
 
-        // 1. 0, 1, 2, 00 이런식으로 나누기
-        for(int i=0; i<num; i++){
+        while(num > 0){
 
-            int j=0; // 자리수 담당
+            // 몫(quo)과 나머지(rem) 변수 초기화
+            rem = num % 3;
+            num = num / 3;
+
+
+            // answer에 나머지를 붙여준다. 0은 4로 치환한다. 몫 -1을 해준다.
+            if(rem == 0){
+                num -= 1;
+                rem = 4;
+            }
+
+            answer += Integer.toString(rem);
 
         }
 
-        // 2. 문자열 붙이기
-
-
-        if (num == 4){
-            return 11;
-        }
-        return 12;
+        return answer;
     }
 
 
     @Test
-    public void 작은수_리턴해주기(){
-        assertEquals(11, for124(4));
-        assertEquals(12, for124(5));
+    public void 리턴받기_123단계(){
+        assertEquals("14", for124(10));
+        assertEquals("12", for124(7));
+        assertEquals("42", for124(9));
     }
 
 
