@@ -21,23 +21,16 @@ public class World124 {
      * */
 
 
-    public int solution(int num){
+    public String solution(int num){
 
         String answer;
 
         // 1 to 3
         answer = for124(num);
 
-        switch (num){
-            case 1 :
-                return 1;
-            case 2 :
-                return 2;
-            case 3 :
-                return 4;
-            default :
-                return 11;
-        }
+        answer = reverseString(answer);
+
+        return answer;
     }
 
 
@@ -67,6 +60,10 @@ public class World124 {
         return answer;
     }
 
+    public static String reverseString(String s) {
+        return ( new StringBuffer(s) ).reverse().toString();
+    }
+
 
     @Test
     public void 리턴받기_123단계(){
@@ -78,10 +75,10 @@ public class World124 {
 
     @Test
     public void 정답() {
-        assertEquals(1, solution(1));
-        assertEquals(2, solution(2));
-        assertEquals(4, solution(3));
-        assertEquals(11, solution(4));
+        assertEquals("1", solution(1));
+        assertEquals("2", solution(2));
+        assertEquals("24", solution(9));
+        assertEquals("41", solution(10));
     }
 
 
