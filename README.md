@@ -1,5 +1,5 @@
 # TDD Examples
-TDD를 알고리즘 문제에 적용한다. 거의 모든 문제는 [programmers](https://programmers.co.kr/)에 있는 문제를 활용
+TDD를 알고리즘 문제에 적용(거의 모든 문제는 [programmers](https://programmers.co.kr/)에 있는 문제 활용)
 
 ## 프로젝트 목적
 이 프로젝트는 *TDD 경험*을 목적으로 제작한 프로젝트입니다.
