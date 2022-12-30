@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/shinsunyoung/TDD-Examples#readme",
   "dependencies": {
-    "mocha": "^6.0.1"
+    "mocha": "^10.2.0"
   }
 }
